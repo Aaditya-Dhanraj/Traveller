@@ -1,41 +1,17 @@
 const express = require('express');
-
-const app = express();
-
-const getAllUsers = (req, res) => {
-  res.status(500).json({
-    status: 'fail,',
-  });
-};
-
-const createUser = (req, res) => {
-  res.status(500).json({
-    status: 'fail,',
-  });
-};
-
-const getUser = (req, res) => {
-  res.status(500).json({
-    status: 'fail,',
-  });
-};
-
-const updateUser = (req, res) => {
-  res.status(500).json({
-    status: 'fail,',
-  });
-};
-
-const deleteUser = (req, res) => {
-  res.status(500).json({
-    status: 'fail,',
-  });
-};
+const userControllers = require('./../controllers/userControllers');
 
 const router = express.Router();
 
-router.route('/').get(getAllUsers).post(createUser);
+router
+  .route('/')
+  .get(userControllers.getAllUsers)
+  .post(userControllers.createUser);
 
-router.route('/:id').get(getUser).patch(updateUser).delete(deleteUser);
+router
+  .route('/:id')
+  .get(userControllers.getUser)
+  .patch(userControllers.updateUser)
+  .delete(userControllers.deleteUser);
 
 module.exports = router;
