@@ -6,7 +6,9 @@ const userRouter = require('./Routes/userRouter');
 const app = express();
 
 // 1)Middlewares
-app.use(morgan('dev'));
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
 app.use(express.json());
 app.use((req, res, next) => {
   req.requestedTime = new Date().toISOString();
