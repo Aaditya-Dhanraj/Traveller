@@ -22,7 +22,7 @@ mongoose
     useFindAndModify: false,
     useUnifiedTopology: true,
   })
-  .then(() => console.log('connection successful!!!'));
+  .then(() => console.log('DB connection successful!!!'));
 // .catch((err) => console.log('ERROR'));
 
 // const testTour = new Tour({
@@ -41,7 +41,7 @@ mongoose
 
 const PORT = process.env.PORT || 4000;
 const server = app.listen(PORT, () => {
-  console.log(` app running on port no ${PORT}....`);
+  console.log(`App running on port no ${PORT}....`);
 });
 
 process.on('unhandledRejection', (err) => {

@@ -15,6 +15,7 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json());
 app.use((req, res, next) => {
   req.requestedTime = new Date().toISOString();
+  console.log(req.headers);
   next();
 });
 
