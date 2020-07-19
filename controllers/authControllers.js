@@ -17,6 +17,8 @@ exports.signup = catchAsync(async (req, res, next) => {
     email: req.body.email,
     password: req.body.password,
     passwordConfirm: req.body.passwordConfirm,
+    // this line of code needs to be deleted because everyone can then register as admin and delete anything
+    // role: req.body.role,
   });
 
   const token = signInToken(newUser._id);
@@ -80,15 +82,15 @@ exports.protect = catchAsync(async (req, res, next) => {
   console.log(decoded);
   //check if user still exists by checking the id still exists or not
 
-  const freshUser = await User.findById(decoded.id);
-  if (!freshUser) {
+  const currentUser = await User.findById(decoded.id);
+  if (!currentUser) {
     return next(
       new AppError('The user belonging to this token does not exist', 401)
     );
   }
 
   // check if user changed password after the token was issued
-  if (freshUser.changedPasswordAfter(decoded.iat)) {
+  if (currentUser.changedPasswordAfter(decoded.iat)) {
     next(
       new AppError(
         'The user Changed the Id or Password, please log in again',
@@ -99,7 +101,19 @@ exports.protect = catchAsync(async (req, res, next) => {
 
   //IF the code reaches through this point then its granted the protected route access
 
-  req.user = freshUser;
+  req.user = currentUser;
 
   next();
 });
+
+exports.restrictTo = (...roles) => {
+  return (req, res, next) => {
+    // roles is a array of names passed in userRouter in delete route in restrictTo function
+    if (!roles.includes(req.user.role)) {
+      return next(
+        new AppError('You do not have Permission to perform this action', 403)
+      );
+    }
+    next();
+  };
+};
