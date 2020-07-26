@@ -58,6 +58,16 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
+userSchema.pre('save', function (next) {
+  //
+  if (!this.isModified('password') || this.isNew) {
+    return next();
+  }
+
+  this.passwordChangedAt = Date.now() - 1000;
+  next();
+});
+
 // Its a instence middleware so it is availaval everywhere where the User is present
 userSchema.methods.correctPassword = async function (
   candidatePassword,
