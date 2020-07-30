@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const slugify = require('slugify');
+// const User = require('./userModels');
 // const validator = require('validator');
 
 const tourSchema = new mongoose.Schema(
@@ -78,6 +79,7 @@ const tourSchema = new mongoose.Schema(
     },
     startDates: [Date],
     startLocation: {
+      // geoJSON data,  longitude first then lattitude opposite of google maps in geoJSON
       type: {
         type: String,
         default: 'Point',
@@ -100,6 +102,12 @@ const tourSchema = new mongoose.Schema(
         day: Number,
       },
     ],
+    guides: [
+      {
+        type: mongoose.Schema.ObjectId,
+        ref: 'User',
+      },
+    ],
     secretTour: {
       type: Boolean,
       default: false,
@@ -115,11 +123,26 @@ tourSchema.virtual('durationWeeks').get(function () {
   return this.duration / 7;
 });
 
+//virtual populate
+tourSchema.virtual('reviews', {
+  ref: 'Review',
+  foreignField: 'tour',
+  localField: '_id',
+});
+
 //document middleware only runs on .save() or .create()
 tourSchema.pre('save', function (next) {
   this.slug = slugify(this.name, { lower: true });
   next();
 });
+
+// we implemented this to find the user from the id given in the JSON data but this has drawbacks like if user updated their id or role this wont work
+
+// tourSchema.pre('save', async function (next) {
+//   const guidesPromises = this.guides.map(async (id) => await User.findById(id));
+//   this.guides = await promise.all(guidesPromises);
+//   next();
+// });
 
 // tourSchema.pre('save', function (next) {
 //   console.log('Will save Documents...');
@@ -135,6 +158,14 @@ tourSchema.pre('save', function (next) {
 tourSchema.pre(/^find/, function (next) {
   this.find({ secretTour: { $ne: true } });
   this.start = Date.now();
+  next();
+});
+
+tourSchema.pre(/^find/, function (next) {
+  this.populate({
+    path: 'guides',
+    select: '-__v -passwordChangedAt',
+  });
   next();
 });
 

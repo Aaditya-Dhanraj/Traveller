@@ -4,6 +4,7 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorControllers');
 const tourRouter = require('./Routes/tourRouter');
 const userRouter = require('./Routes/userRouter');
+const reviewRouter = require('./Routes/reviewRouter');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
@@ -65,6 +66,7 @@ app.use((req, res, next) => {
 
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/reviews', reviewRouter);
 
 // If not handled by any other middleware then it dosent exist handler
 app.all('*', (req, res, next) => {
