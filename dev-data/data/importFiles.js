@@ -3,9 +3,7 @@ const dotenv = require('dotenv');
 const fs = require('fs');
 const Tour = require('../../models/tourModels');
 
-const tours = JSON.parse(
-  fs.readFileSync(`${__dirname}/tours-simple.json`, 'utf-8')
-);
+const tours = JSON.parse(fs.readFileSync(`${__dirname}/tours.json`, 'utf-8'));
 
 dotenv.config({ path: './config.env' });
 
