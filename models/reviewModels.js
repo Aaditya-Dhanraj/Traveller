@@ -1,6 +1,7 @@
 // review // rating // createdAt // ref to tour // ref to user
 
 const mongoose = require('mongoose');
+const Tour = require('./tourModels');
 
 const reviewSchema = new mongoose.Schema(
   {
@@ -34,6 +35,8 @@ const reviewSchema = new mongoose.Schema(
   }
 );
 
+reviewSchema.index({ tour: 1, user: 1 }, { unique: true });
+
 // reviewSchema.pre(/^find/, function (next) {
 //   this.populate({
 //     path: 'tour',
@@ -60,19 +63,44 @@ reviewSchema.statics.calcAverageRatings = async function (tourId) {
     },
     {
       $group: {
-        _id: 'tour',
+        _id: '$tour',
         nRating: { $sum: 1 },
         avgRating: { $avg: '$rating' },
       },
     },
   ]);
-  console.log(stats);
+  // console.log(stats);
+
+  if (stats.length > 0) {
+    await Tour.findByIdAndUpdate(tourId, {
+      ratingsQuantity: stats[0].nRating,
+      ratingsAverage: stats[0].avgRating,
+    });
+  } else {
+    await Tour.findByIdAndUpdate(tourId, {
+      ratingsQuantity: 0,
+      ratingsAverage: 4.5,
+    });
+  }
 };
 
+// post middlewae dont have a "next();"
 reviewSchema.post('save', function () {
   // this stands for the current review doc
-
   this.constructor.calcAverageRatings(this.tour);
+});
+
+//we do not get current document in pre because it execute before action so there is a way around it to pass doc from pre to post middleware
+// from this we have to pass the doc from pre to post middleware
+reviewSchema.pre(/^findOneAnd/, async function (next) {
+  this.r = await this.findOne();
+  // console.log(this.r);
+  next();
+});
+
+reviewSchema.post(/^findOneAnd/, async function () {
+  // this.r = await this.findOne();     THIS LINE DOES NOT WORK here because ,this query has already exicuted
+  await this.r.constructor.calcAverageRatings(this.r.tour);
 });
 
 const Review = mongoose.model('Review', reviewSchema);

@@ -18,12 +18,11 @@ const factory = require('./handlerFactory');
 // });
 
 exports.setTourUserIds = (req, res, next) => {
-  //nested routes allowed
+  // Allow nested routes
   if (!req.body.tour) req.body.tour = req.params.tourId;
   if (!req.body.user) req.body.user = req.user.id;
   next();
 };
-
 // exports.createReview = catchAsync(async (req, res, next) => {
 //   //nested routes allowed
 //   if (!req.body.tour) req.body.tour = req.params.tourId;
