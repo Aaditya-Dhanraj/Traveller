@@ -6,7 +6,7 @@ const reviewRouter = require('./reviewRouter');
 
 const router = express.Router();
 
-router.use('./:tourId:/reviews', reviewRouter);
+router.use('./:tourId/reviews', reviewRouter);
 
 // router.param('id', tourControllers.checkId);
 
@@ -26,20 +26,34 @@ router
 
 router.route('/tours-stats').get(tourControllers.getTourStats);
 
-router.route('/monthly-plans/:year').get(tourControllers.getMonthlyPlans);
+router
+  .route('/monthly-plans/:year')
+  .get(
+    authControllers.protect,
+    authControllers.restrictTo('admin', 'lead-guide', 'guide'),
+    tourControllers.getMonthlyPlans
+  );
 
 router
   .route('/')
-  .get(authControllers.protect, tourControllers.getAllTours)
-  .post(tourControllers.createTour);
+  .get(tourControllers.getAllTours)
+  .post(
+    authControllers.protect,
+    authControllers.restrictTo('admin', 'lead-guide'),
+    tourControllers.createTour
+  );
 
 router
   .route('/:id')
   .get(tourControllers.getTour)
-  .patch(tourControllers.updateTour)
+  .patch(
+    authControllers.protect,
+    authControllers.restrictTo('admin', 'lead-guide'),
+    tourControllers.updateTour
+  )
   .delete(
     authControllers.protect,
-    authControllers.restrictTo('admin', 'user-guide'),
+    authControllers.restrictTo('admin', 'lead-guide'),
     tourControllers.deleteTour
   );
 

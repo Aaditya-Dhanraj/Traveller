@@ -119,6 +119,11 @@ const tourSchema = new mongoose.Schema(
   }
 );
 
+// this will create a index of price making it easier to find the price range in less itterations
+// tourSchema.index({ price: 1 });
+tourSchema.index({ price: 1, ratingsAverage: -1 });
+tourSchema.index({ slug: 1 });
+
 tourSchema.virtual('durationWeeks').get(function () {
   return this.duration / 7;
 });

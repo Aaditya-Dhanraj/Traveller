@@ -4,17 +4,25 @@ const authControllers = require('./../controllers/authControllers');
 
 const router = express.Router();
 
+//for these four we do not need to log in
 router.post('/signup', authControllers.signup);
 router.post('/login', authControllers.login);
 router.post('/forgotPassword', authControllers.forgotPassword);
 router.patch('/resetPassword/:token', authControllers.resetPassword);
-router.patch(
-  '/updateMyPassword',
-  authControllers.protect,
-  authControllers.updatePassword
-);
-router.patch('/updateMe', authControllers.protect, userControllers.updateMe);
-router.delete('/deleteMe', authControllers.protect, userControllers.deleteMe);
+
+//because middleware run in sequense this will run and protect all routes below it
+router.use(authControllers.protect);
+
+router.get('/me', userControllers.getMe, userControllers.getUser);
+
+router.patch('/updateMyPassword', authControllers.updatePassword);
+
+router.patch('/updateMe', userControllers.updateMe);
+
+router.delete('/deleteMe', userControllers.deleteMe);
+
+//because middleware run in sequense this will run and restrict all routes below it
+router.use(authControllers.restrictTo('admin'));
 
 router
   .route('/')
