@@ -7,6 +7,8 @@ const router = express.Router();
 //for these four we do not need to log in
 router.post('/signup', authControllers.signup);
 router.post('/login', authControllers.login);
+router.get('/logout', authControllers.logout);
+
 router.post('/forgotPassword', authControllers.forgotPassword);
 router.patch('/resetPassword/:token', authControllers.resetPassword);
 

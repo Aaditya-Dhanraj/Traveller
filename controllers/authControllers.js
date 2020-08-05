@@ -92,6 +92,16 @@ exports.login = catchAsync(async (req, res, next) => {
   // });
 });
 
+exports.logout = async (req, res) => {
+  res.cookie('jwt', 'loggedOut', {
+    expires: new Date(Date.now() + 5000),
+    httpOnly: true,
+  });
+  res.status(200).json({
+    status: 'success',
+  });
+};
+
 exports.protect = catchAsync(async (req, res, next) => {
   // Getting token and checking if its true
   let token;
@@ -99,9 +109,9 @@ exports.protect = catchAsync(async (req, res, next) => {
     req.headers.authorization &&
     req.headers.authorization.startsWith('Bearer')
   ) {
-    token = await req.headers.authorization.split(' ')[1];
-  } else if ((req, cookies.jwt)) {
-    token = await req.cookies.jwt;
+    token = req.headers.authorization.split(' ')[1];
+  } else if (req.cookies.jwt) {
+    token = req.cookies.jwt;
   }
   // console.log(token);
 
@@ -113,7 +123,7 @@ exports.protect = catchAsync(async (req, res, next) => {
 
   // Varification tokens  using promisify ie inbuilt promise returning of node js
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
-  console.log(decoded);
+  // console.log(decoded);
   //check if user still exists by checking the id still exists or not
 
   const currentUser = await User.findById(decoded.id);
@@ -125,7 +135,7 @@ exports.protect = catchAsync(async (req, res, next) => {
 
   // check if user changed password after the token was issued
   if (currentUser.changedPasswordAfter(decoded.iat)) {
-    next(
+    return next(
       new AppError(
         'The user Changed the Id or Password, please log in again',
         401
@@ -136,6 +146,7 @@ exports.protect = catchAsync(async (req, res, next) => {
   //IF the code reaches through this point then its granted the protected route access
 
   req.user = currentUser;
+  res.locals.user = currentUser;
 
   next();
 });
