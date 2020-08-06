@@ -1,6 +1,8 @@
 // const fs = require('fs');
 // const router = require('../Routes/tourRouter');
 const Tour = require('./../models/tourModels');
+const multer = require('multer');
+const sharp = require('sharp');
 const factory = require('./handlerFactory');
 // const APIFeatures = require('./../utils/apiFeatures');
 const AppError = require('./../utils/appError');
@@ -31,6 +33,35 @@ const catchAsync = require('./../utils/catchAsync');
 //   }
 //   next();
 // };
+
+// TOUR PIC UPLOAD
+
+const multerStorage = multer.memoryStorage();
+
+const multerFilter = function (req, file, cb) {
+  if (file.mimetype.startsWith('image')) {
+    cb(null, true);
+  } else {
+    cb(new AppError('Not an image! Please upload an Image file', 400), false);
+  }
+};
+
+const upload = multer({
+  storage: multerStorage,
+  fileFilter: multerFilter,
+});
+
+//if only one field with array above upload would be = upload.array('images',5) it produce many files as "req.files"
+//  if only single pic then upload would be = upload.single('image') it produce single file as "req.file"
+exports.uploadTourImages = upload.fields([
+  { name: 'imageCover', maxCount: 1 },
+  { name: 'images', maxCount: 3 },
+]);
+
+exports.resizeTourImages = (req, res, next) => {
+  console.log(req.files);
+  next();
+};
 
 //ALIAS ROUTS
 
