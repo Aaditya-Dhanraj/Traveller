@@ -5,6 +5,7 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorControllers');
 const tourRouter = require('./Routes/tourRouter');
 const userRouter = require('./Routes/userRouter');
+const bookingRouter = require('./Routes/bookingRouter');
 const reviewRouter = require('./Routes/reviewRouter');
 const viewRouter = require('./Routes/viewRouter');
 const rateLimit = require('express-rate-limit');
@@ -80,6 +81,7 @@ app.use((req, res, next) => {
 app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
+app.use('/api/v1/booking', bookingRouter);
 app.use('/api/v1/reviews', reviewRouter);
 
 // If not handled by any other middleware then it dosent exist handler

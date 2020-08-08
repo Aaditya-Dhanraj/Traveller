@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-const sendEmail = require('./../utils/email');
+const Email = require('./../utils/email');
 const { promisify } = require('util');
 const jwt = require('jsonwebtoken');
 const User = require('./../models/userModels');
@@ -48,7 +48,8 @@ exports.signup = catchAsync(async (req, res, next) => {
     // this line of code needs to be deleted because everyone can then register as admin and delete anything
     // role: req.body.role,
   });
-
+  const url = `${req.protocol}://${req.get('host')}/me`;
+  await new Email(newUser, url).sendWelcome();
   createSendToken(newUser, 201, res);
 
   // const token = signInToken(newUser._id);
@@ -207,17 +208,20 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
   // 3) send it to user email
 
-  const resetURL = `${req.protocol}://${req.get(
-    'host'
-  )}/api/v1/users/resetPassword/${resetToken}`;
-  const message = `Forgot your password ?\ Submit a new PATCH request with a new Password and confirmPassword to \ ${resetURL} \ If you didn't forgot your password, then please ignore this mail.`;
+  // const message = `Forgot your password ?\ Submit a new PATCH request with a new Password and confirmPassword to \ ${resetURL} \ If you didn't forgot your password, then please ignore this mail.`;
 
   try {
-    await sendEmail({
-      email: user.email,
-      subject: 'Your password reset token (valid for 10 min)',
-      message,
-    });
+    // await sendEmail({
+    //   email: user.email,
+    //   subject: 'Your password reset token (valid for 10 min)',
+    //   message,
+    // });
+
+    const resetURL = `${req.protocol}://${req.get(
+      'host'
+    )}/api/v1/users/resetPassword/${resetToken}`;
+
+    await new Email(user, resetURL).sendPasswordReset();
 
     res.status(200).json({
       status: 'success',

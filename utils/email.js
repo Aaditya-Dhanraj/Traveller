@@ -9,13 +9,37 @@ module.exports = class Email {
     this.to = user.email;
     this.firstName = user.name.split(' ')[0];
     this.url = url;
-    this.form = 'Shammi Kumar <${process.env.EMAIL_FROM}>';
+    this.form = `Shammi Kumar <${process.env.EMAIL_FROM}>`;
   }
 
   newTransport() {
-    if (process.env.NODE_ENV === 'production') {
+    //   THIS FEATURE IS NOT WORKING BECAUSE SENDGRID IS NOT WORKING
+    if(process.env.NODE_ENV === 'production'){
       return 1;
     }
+    // if (process.env.NODE_ENV === 'production') {
+    //   // Sendgrid
+    //   return nodemailer.createTransport({
+    //     service: 'SendGrid',
+    //     auth: {
+    //       user: process.env.SENDGRID_USERNAME,
+    //       pass: process.env.SENDGRID_PASSWORD
+    //     }
+    //   });
+    // }
+
+    // THIS IS NOT WORKING BECAUSE SENDINBLUE IS NOT WORKING FOR NOW EITHER
+        // if (process.env.NODE_ENV === 'production') {
+    //   return nodemailer.createTransport({
+    //     host: process.env.EMAIL_PROD_HOST,
+    //     port: process.env.EMAIL_PROD_PORT,
+    //     secure: false,
+    //     auth: {
+    //       user: process.env.EMAIL_PROD_FROM,
+    //       pass: process.env.EMAIL_PROD_MASTER_PASSWORD,
+    //     },
+    //   });
+    // }
 
     return nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
@@ -31,7 +55,7 @@ module.exports = class Email {
     // here we will send the actual email when in production
 
     // 1) Render HTML based on pug template
-    const html = pug.renderFile(`${__dirname}/..views/email/${template}.pug`, {
+    const html = pug.renderFile(`${__dirname}/../views/email/${template}.pug`, {
       firstName: this.firstName,
       url: this.url,
       subject,
@@ -51,6 +75,13 @@ module.exports = class Email {
   }
   async sendWelcome() {
     await this.send('welcome', 'Welcome to the TRIPPER Family');
+  }
+
+  async sendPasswordReset() {
+    await this.send(
+      'passwordReset',
+      'Your password reset token (Valid for only 10 minutes)'
+    );
   }
 };
 
