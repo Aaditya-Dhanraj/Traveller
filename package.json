@@ -31,6 +31,7 @@
     "nodemailer": "^6.4.10",
     "pug": "^3.0.0",
     "sharp": "^0.25.4",
+    "sib-api-v3-sdk": "^7.2.4",
     "slugify": "^1.4.4",
     "stripe": "^8.84.0",
     "validator": "^13.1.1",

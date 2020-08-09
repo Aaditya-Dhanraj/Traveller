@@ -8679,7 +8679,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-var stripe = Stripe('pk_test_BUkd0ZXAj6m0q0jMyRgBxNns00PPtgvjjr');
+var stripe = Stripe('pk_test_51HDyhOH0PyO1c3J7nS1Zg272EKViX32rF5VXyN0Nfh7FTsorAtxi1WTFPa3eRAsvNbKDN7srAM2jTwJvpLmVCrK100y7TGzNiY');
 
 var bookTour =
 /*#__PURE__*/
@@ -8694,7 +8694,13 @@ function () {
           case 0:
             _context.prev = 0;
             _context.next = 3;
-            return (0, _axios.default)("http://127.0.0.1:3000/api/v1/bookings/checkout-session/".concat(tourId));
+            return (0, _axios.default)("http://127.0.0.1:3000/api/v1/booking/checkout-session/".concat(tourId), {
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Content-type': 'Application/json',
+                Authorization: "Bearer sk_test_51HDyhOH0PyO1c3J7djCQwBoHXNecaMbAoYqJmM2XZXGkKqQn7HGqRPlDVRxeD54klyvrkr2mKWFqZgBzAlLsZs9V0091V9Lef8"
+              }
+            });
 
           case 3:
             session = _context.sent;
@@ -8712,7 +8718,8 @@ function () {
           case 9:
             _context.prev = 9;
             _context.t0 = _context["catch"](0);
-            console.log(_context.t0);
+            console.log(_context.t0); // console.log(process.env.STRIPE_SECRET_KEY);
+
             (0, _alerts.showAlert)('error', _context.t0);
 
           case 13:
@@ -9108,7 +9115,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61411" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64093" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

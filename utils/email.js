@@ -1,6 +1,8 @@
 const nodemailer = require('nodemailer');
 const pug = require('pug');
 const htmlToText = require('html-to-text');
+// var SibApiV3Sdk = require('sib-api-v3-sdk');
+// var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 // new Email(user , url).sendWelcome();    this format is best just like appError this will take care of rest of the stuff
 
@@ -14,7 +16,7 @@ module.exports = class Email {
 
   newTransport() {
     //   THIS FEATURE IS NOT WORKING BECAUSE SENDGRID IS NOT WORKING
-    if(process.env.NODE_ENV === 'production'){
+    if (process.env.NODE_ENV === 'production') {
       return 1;
     }
     // if (process.env.NODE_ENV === 'production') {
@@ -29,7 +31,7 @@ module.exports = class Email {
     // }
 
     // THIS IS NOT WORKING BECAUSE SENDINBLUE IS NOT WORKING FOR NOW EITHER
-        // if (process.env.NODE_ENV === 'production') {
+    // if (process.env.NODE_ENV === 'production') {
     //   return nodemailer.createTransport({
     //     host: process.env.EMAIL_PROD_HOST,
     //     port: process.env.EMAIL_PROD_PORT,
@@ -84,6 +86,22 @@ module.exports = class Email {
     );
   }
 };
+
+// Configure API key authorization: api-key
+// var apiKey = defaultClient.authentications['api-key'];
+// apiKey.apiKey =
+//   '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';
+
+//   var apiInstance = new SibApiV3Sdk.ContactsApi();
+
+// var createContact = new SibApiV3Sdk.CreateContact(); // CreateContact | Values to create a contact
+// createContact = { 'email' : "john@doe.com" };
+
+// apiInstance.createContact(createContact).then(function(data) {
+//   console.log('API called successfully. Returned data: ' + data);
+// }, function(error) {
+//   console.error(error);
+// });
 
 // const sendEmail = async (options) => {
 // // 1) Create a transporter
