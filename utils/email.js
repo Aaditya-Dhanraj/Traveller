@@ -16,9 +16,9 @@ module.exports = class Email {
 
   newTransport() {
     //   THIS FEATURE IS NOT WORKING BECAUSE SENDGRID IS NOT WORKING
-    if (process.env.NODE_ENV === 'production') {
-      return 1;
-    }
+    // if (process.env.NODE_ENV === 'production') {
+    //   return 1;
+    // }
     // if (process.env.NODE_ENV === 'production') {
     //   // Sendgrid
     //   return nodemailer.createTransport({

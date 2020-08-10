@@ -9,6 +9,7 @@ const bookingRouter = require('./Routes/bookingRouter');
 const reviewRouter = require('./Routes/reviewRouter');
 const viewRouter = require('./Routes/viewRouter');
 const rateLimit = require('express-rate-limit');
+const cors = require('cors');
 const compression = require('compression');
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
@@ -19,7 +20,7 @@ const cookieParser = require('cookie-parser');
 // start express app
 const app = express();
 
-app.enable('trust proxy')
+app.enable('trust proxy');
 
 //setted up pug template engine
 app.set('view engine', 'pug');
@@ -27,10 +28,17 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // 1)Global Middlewares
+// implementing cors
+app.use(cors());
 
 // serving static file
 // app.use(express.static(`${__dirname}/public`));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.options('*', cors());
+
+// // for request on one route
+// app.options('/api/v1/tours/:id', cors());
 
 // set security http headers
 app.use(helmet());

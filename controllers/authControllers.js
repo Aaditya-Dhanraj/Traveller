@@ -24,8 +24,6 @@ const createSendToken = (user, statusCode, req, res) => {
     secure: req.secure || req.headers['x-forwarded-proto'] === 'https',
   });
 
-  res.cookie('jwt', token, cookieOptions);
-
   // This will remove the password
   user.password = undefined;
 
@@ -47,9 +45,9 @@ exports.signup = catchAsync(async (req, res, next) => {
     // this line of code needs to be deleted because everyone can then register as admin and delete anything
     // role: req.body.role,
   });
-  const url = `${req.protocol}://${req.get('host')}/me`;
-  await new Email(newUser, url).sendWelcome();
-  createSendToken(newUser, 201,req, res);
+  // const url = `${req.protocol}://${req.get('host')}/me`;
+  // await new Email(newUser, url).sendWelcome();
+  createSendToken(newUser, 201, req, res);
 
   // const token = signInToken(newUser._id);
 
@@ -82,7 +80,7 @@ exports.login = catchAsync(async (req, res, next) => {
     return next(new AppError('Incorrect Email or Password', 401));
   }
 
-  createSendToken(user, 200,req, res);
+  createSendToken(user, 200, req, res);
 
   // const token = signInToken(user._id);
 
@@ -265,7 +263,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
   await user.save();
 
   // 4) Log the user in and send JWT
-  createSendToken(user, 200,req, res);
+  createSendToken(user, 200, req, res);
   // const token = signInToken(user._id);
 
   // res.status(200).json({
@@ -323,7 +321,7 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
   // User.findByIdAndUpdate will NOT work as intended!
 
   // 4) Log user in, send JWT
-  createSendToken(user, 200,req, res);
+  createSendToken(user, 200, req, res);
   // const token = signInToken(user._id);
 
   // res.status(200).json({
