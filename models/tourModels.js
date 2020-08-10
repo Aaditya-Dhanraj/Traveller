@@ -176,11 +176,11 @@ tourSchema.pre(/^find/, function (next) {
   next();
 });
 
-tourSchema.post(/^find/, function (doc, next) {
-  console.log(`query took ${Date.now() - this.start} milisecond.`);
-  console.log(doc);
-  next();
-});
+// tourSchema.post(/^find/, function (doc, next) {
+//   console.log(`query took ${Date.now() - this.start} milisecond.`);
+//   console.log(doc);
+//   next();
+// });
 
 // this middleware always comes first on top of any middleware but in geojson aggregate pipeline $geoNear should be always on top
 // //Aggrigations middleware
