@@ -20,7 +20,12 @@ router.get(
 );
 router.get('/login', authControllers.isLoggedIn, viewsControllers.getLoginForm);
 router.get('/me', authControllers.protect, viewsControllers.getAccount);
-router.get('/my-tours', authControllers.protect, viewsControllers.getMyTours);
+router.get(
+  '/my-tours',
+  // bookingControllers.createBookingCheckout,
+  authControllers.protect,
+  viewsControllers.getMyTours
+);
 
 router.post(
   '/submit-user-data',

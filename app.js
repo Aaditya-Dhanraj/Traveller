@@ -8,6 +8,7 @@ const userRouter = require('./Routes/userRouter');
 const bookingRouter = require('./Routes/bookingRouter');
 const reviewRouter = require('./Routes/reviewRouter');
 const viewRouter = require('./Routes/viewRouter');
+const bookingControllers = require('./controllers/bookingControllers');
 const rateLimit = require('express-rate-limit');
 const cors = require('cors');
 const compression = require('compression');
@@ -16,6 +17,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const { application, json } = require('express');
 
 // start express app
 const app = express();
@@ -56,6 +58,13 @@ const limiter = rateLimit({
 });
 
 app.use('/api', limiter);
+
+// this webhook is here because stripe wont take json data but will take raw data so awe have to place itjust before it is parsed
+app.post(
+  '/webhook-checkout',
+  express.raw({ type: 'application/json' }),
+  bookingControllers.webhookCheckout
+);
 
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));
