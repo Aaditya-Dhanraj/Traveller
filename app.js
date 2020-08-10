@@ -15,7 +15,11 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+
+// start express app
 const app = express();
+
+app.enable('trust proxy')
 
 //setted up pug template engine
 app.set('view engine', 'pug');
