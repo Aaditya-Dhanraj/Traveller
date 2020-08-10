@@ -5,14 +5,19 @@ const bookingControllers = require('../controllers/bookingControllers');
 
 const router = express.Router();
 
+// router.use(viewsController.alerts);
 router.get(
   '/',
-  bookingControllers.createBookingCheckout,
+  // bookingControllers.createBookingCheckout,
   authControllers.isLoggedIn,
   viewsControllers.getOverview
 );
 router.get('/tour/:slug', authControllers.isLoggedIn, viewsControllers.getTour);
-router.get('/signup', viewsControllers.getSignupForm);
+router.get(
+  '/signup',
+  authControllers.isLoggedIn,
+  viewsControllers.getSignupForm
+);
 router.get('/login', authControllers.isLoggedIn, viewsControllers.getLoginForm);
 router.get('/me', authControllers.protect, viewsControllers.getAccount);
 router.get('/my-tours', authControllers.protect, viewsControllers.getMyTours);
