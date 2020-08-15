@@ -1,10 +1,10 @@
 [
   {
     "startLocation": {
-      "description": "Miami, USA",
+      "description": "Barsaini, Himachal Pradesh",
       "type": "Point",
-      "coordinates": [-80.185942, 25.774772],
-      "address": "301 Biscayne Blvd, Miami, FL 33132, USA"
+      "coordinates": [77.4383, 32.0008],
+      "address": "Barshaini Link Road, Barshaini, Himachal Pradesh 175105"
     },
     "ratingsAverage": 4.8,
     "ratingsQuantity": 6,
@@ -15,52 +15,52 @@
       "2021-08-18T09:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c2955",
-    "name": "The Sea Explorer",
-    "duration": 7,
+    "name": "The Great Kheerganga",
+    "duration": 4,
     "maxGroupSize": 15,
     "difficulty": "medium",
     "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a1f4e2f8fb814b56fa185"],
     "price": 497,
-    "summary": "Exploring the jaw-dropping US east coast by foot and by boat",
-    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "summary": "Its a holy place with a hot water spring and small temple of lord shiva.",
+    "description": "In the abode of Himachal Pradesh, lies a beautiful place called Kheerganga (3500m) at the extreme end of Sylvan Hills’ Parvati Valley, where it is believed Lord Shiva meditated for thousands of years. The lush greenery of the mountains, the elegant River Parvati and picturesque skies are undoubtedly a much-awaited delight to a trekker’s eyes and soul. The place has a religious significance for both Hindu and Sikh pilgrims. Situated 22 km away from Manikaran, Kheerganga is popular for its hot water spring even during heavy snowfall and bathing in it is an experience you will definitely cherish. While trekking, the trail unveils popular tourist destinations en route like Rudra Nag Waterfall and Shiv Temple. You should go ahead for the Kasol – Kheerganga trek to experience peace in the soothing sights of the great Himalayas.",
     "imageCover": "tour-2-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c2959",
-        "description": "Lummus Park Beach",
+        "description": "Temple of Barsaini",
         "type": "Point",
-        "coordinates": [-80.128473, 25.781842],
+        "coordinates": [77.436937, 32.000956],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c2958",
-        "description": "Islamorada",
+        "description": "Cocoon Cafe",
         "type": "Point",
-        "coordinates": [-80.647885, 24.909047],
+        "coordinates": [77.471085, 32.004687],
         "day": 2
       },
       {
         "_id": "5c88fa8cf4afda39709c2957",
-        "description": "Sombrero Beach",
+        "description": "Kheerganga",
         "type": "Point",
-        "coordinates": [-81.0784, 24.707496],
+        "coordinates": [77.509639, 31.993157],
         "day": 3
       },
       {
         "_id": "5c88fa8cf4afda39709c2956",
-        "description": "West Key",
+        "description": "Kasol",
         "type": "Point",
-        "coordinates": [-81.768719, 24.552242],
-        "day": 5
+        "coordinates": [77.31758, 32.016247],
+        "day": 4
       }
     ]
   },
   {
     "startLocation": {
-      "description": "Banff, CAN",
+      "description": "Bhuntar, Himachal Pradesh",
       "type": "Point",
-      "coordinates": [-115.570154, 51.178456],
-      "address": "224 Banff Ave, Banff, AB, Canada"
+      "coordinates": [77.146382, 31.886607],
+      "address": "Bhuntar, Himachal Pradesh 175105"
     },
     "ratingsAverage": 5,
     "ratingsQuantity": 9,
@@ -71,49 +71,56 @@
       "2021-10-05T09:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c2951",
-    "name": "The Forest Hiker",
+    "name": "The Malana Cream",
     "duration": 5,
     "maxGroupSize": 25,
-    "difficulty": "easy",
+    "difficulty": "medium",
     "guides": [
       "5c8a21d02f8fb814b56fa189",
       "5c8a201e2f8fb814b56fa186",
       "5c8a1f292f8fb814b56fa184"
     ],
     "price": 397,
-    "summary": "Breathtaking hike through the Canadian Banff National Park",
-    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "summary": "Breathtaking hike through the Beautiful Kasol to Malana village",
+    "description": "Overlooked by Chandrakhani and Deo Tibba Peaks, Malana is a quaint little hamlet located in the dreamy surroundings in the Parvati Valley. The Village guarded by towering peaks is certainly not easy to climb and one has to complete the Malana Trek after traversing the Malana Nallah that flows right across the Parvati Valley. The 5 km trek from Malana Taxi stand to the village tucked at 10000 feet is one of the engrossing day treks you would ever take. Walking the Malana Trek one can’t escape the perfect nature setting around. The raw appeal of the vast valley, the snappy appearance of the Malanese passing by, and hasish instilled in the air around makes this trek special one. Kasol, Chalal, Tosh, and Kheerganga aren’t too far either; all you need is a couple of days extra time. Club your Malana Trek with these exciting treks near Kasol and you get a perfect recipe for an extended weekend. Moving ahead, let’s find out all the whats, hows, and wheres of the Malana Village Trek!",
     "imageCover": "tour-1-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c2954",
-        "description": "Banff National Park",
+        "description": "Kasol, Himachal Pradesh",
         "type": "Point",
-        "coordinates": [-116.214531, 51.417611],
+        "coordinates": [77.315593, 32.010939],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c2953",
-        "description": "Jasper National Park",
+        "description": "Malana Cafe Point",
         "type": "Point",
-        "coordinates": [-118.076152, 52.875223],
+        "coordinates": [77.257946, 32.035628],
         "day": 3
       },
       {
         "_id": "5c88fa8cf4afda39709c2952",
-        "description": "Glacier National Park of Canada",
+        "description": "Malana Village",
         "type": "Point",
-        "coordinates": [-117.490309, 51.261937],
+        "coordinates": [77.260363, 32.062659],
+        "day": 4
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2902",
+        "description": "The Great Himalayan National Park",
+        "type": "Point",
+        "coordinates": [77.145524, 31.891489],
         "day": 5
       }
     ]
   },
   {
     "startLocation": {
-      "description": "Aspen, USA",
+      "description": "Solang Valley, Himachal Pradesh",
       "type": "Point",
-      "coordinates": [-106.822318, 39.190872],
-      "address": "419 S Mill St, Aspen, CO 81611, USA"
+      "coordinates": [77.14935, 32.311101],
+      "address": "Solang Valley P.O. Pahchan, Burwa, Himachal Pradesh 175131"
     },
     "ratingsAverage": 4.5,
     "ratingsQuantity": 6,
@@ -124,10 +131,10 @@
       "2023-01-06T10:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c295a",
-    "name": "The Snow Adventurer",
-    "duration": 4,
+    "name": "The Gates of haven",
+    "duration": 2,
     "maxGroupSize": 10,
-    "difficulty": "difficult",
+    "difficulty": "easy",
     "guides": [
       "5c8a21d02f8fb814b56fa189",
       "5c8a23412f8fb814b56fa18c",
@@ -135,31 +142,31 @@
     ],
     "price": 997,
     "summary": "Exciting adventure in the snow with snowboarding and skiing",
-    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
+    "description": "The Beas Kund trek is one of the most popular trails that one can do on a longer weekend in Manali. The trek takes you away from the hustle and bustle of Manali city. Following the banks of Beas River expect great views of Pir Pinjal ranges. The meadows of Dhundi & Bakarthach are spectacular in its beauty. As you climb higher you reach the origin of River Beas. A small glacial lake fed by melting snow glaciers from higher peaks around. This trek is suitable for all age groups and a basic fitness level should be more than enough.",
     "imageCover": "tour-3-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c295c",
-        "description": "Aspen Highlands",
+        "description": "Beas Kund",
         "type": "Point",
-        "coordinates": [-106.855385, 39.182677],
+        "coordinates": [77.085511, 32.366633],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c295b",
-        "description": "Beaver Creek",
+        "description": "Solang Ski Resot",
         "type": "Point",
-        "coordinates": [-106.516623, 39.60499],
+        "coordinates": [77.157626, 32.316986],
         "day": 2
       }
     ]
   },
   {
     "startLocation": {
-      "description": "Las Vegas, USA",
+      "description": "Manali, Himachal Pradesh",
       "type": "Point",
-      "coordinates": [-115.172652, 36.110904],
-      "address": "3663 S Las Vegas Blvd, Las Vegas, NV 89109, USA"
+      "coordinates": [77.189068, 32.243826],
+      "address": "Circuit House Marg, Manali, Himachal Pradesh 175131"
     },
     "ratingsAverage": 4.7,
     "ratingsQuantity": 7,
@@ -170,8 +177,8 @@
       "2022-08-12T09:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c2961",
-    "name": "The Park Camper",
-    "duration": 10,
+    "name": "The Magnificent Chandrakhani",
+    "duration": 4,
     "maxGroupSize": 15,
     "difficulty": "medium",
     "guides": [
@@ -180,46 +187,46 @@
       "5c8a201e2f8fb814b56fa186"
     ],
     "price": 1497,
-    "summary": "Breathing in Nature in America's most spectacular National Parks",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!",
+    "summary": "Breathing in the beautiful and magnificent view of Deo Tibba and Pirpanjal ranges",
+    "description": "One of the popular treks in the Indian Himalayan region that is located in Himachal Pradesh, the Chandrakhani Pass Trek covers a fascinating route with amazing view of Deo Tibba and Pin Parvati range. The journey covers the spectacles of Kullu valley, passing through a rich forest that is a home to several animal and bird species. Further, the trail cutting across small and gushing streams and walking through narrow ridges makes it more adventurous and strenuous. The Chandrakhani Pass Trek, which stretches from an elevation of 2,050 meters to 3,660 meters, despite being one of the moderate and low altitude treks in Himachal Pradesh requires the trekker to get acclimatized to the prevailing conditions.",
     "imageCover": "tour-5-cover.jpg",
     "locations": [
       {
-        "_id": "5c88fa8cf4afda39709c2965",
-        "description": "Zion Canyon National Park",
+        "_id": "5c88fa8cf4afda39709c2995",
+        "description": "Rumsu Thanch",
         "type": "Point",
-        "coordinates": [-112.987418, 37.198125],
+        "coordinates": [77.178641, 32.114895],
         "day": 1
       },
       {
-        "_id": "5c88fa8cf4afda39709c2964",
-        "description": "Antelope Canyon",
+        "_id": "5c88fa8cf4afda39709c2994",
+        "description": "Chanderkhani Pass",
         "type": "Point",
-        "coordinates": [-111.376161, 36.86438],
+        "coordinates": [77.240774, 32.07133],
+        "day": 2
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2993",
+        "description": "Malana Village",
+        "type": "Point",
+        "coordinates": [77.261465, 32.062118],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c2992",
+        "description": "Manali Nature Park",
+        "type": "Point",
+        "coordinates": [77.189212, 32.247131],
         "day": 4
-      },
-      {
-        "_id": "5c88fa8cf4afda39709c2963",
-        "description": "Grand Canyon National Park",
-        "type": "Point",
-        "coordinates": [-112.115763, 36.058973],
-        "day": 5
-      },
-      {
-        "_id": "5c88fa8cf4afda39709c2962",
-        "description": "Joshua Tree National Park",
-        "type": "Point",
-        "coordinates": [-116.107963, 34.011646],
-        "day": 9
       }
     ]
   },
   {
     "startLocation": {
-      "description": "NYC, USA",
+      "description": "Shimla, Himachal Pradesh",
       "type": "Point",
-      "coordinates": [-73.985141, 40.75894],
-      "address": "Manhattan, NY 10036, USA"
+      "coordinates": [77.172825, 31.104708],
+      "address": "Mall Rd, Middle Bazar, Lower Bazar, Shimla, Himachal Pradesh 171001"
     },
     "ratingsAverage": 4.6,
     "ratingsQuantity": 5,
@@ -230,45 +237,38 @@
       "2021-06-09T09:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c295d",
-    "name": "The City Wanderer",
-    "duration": 9,
+    "name": "The Temple of Gods",
+    "duration": 1,
     "maxGroupSize": 20,
     "difficulty": "easy",
     "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a201e2f8fb814b56fa186"],
     "price": 1197,
-    "summary": "Living the life of Wanderlust in the US' most beatiful cities",
-    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet.\nConsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat!",
+    "summary": "There is a huge statue of Lord Hanuman at the temple, standing at 108 feet high",
+    "description": "Jakhu Temple in Shimla is a temple dedicated to Lord Hanuman and is famed for being home to thousands of adorable monkeys. There is a huge statue of Lord Hanuman at the temple, standing at 108 feet high, which is the cynosure of all eyes. The temple is located on the highest peak of Shimla, at a height of 2455 meters, and is a major attraction in terms of religious travelers. While trekking to the temple, visitors can see the 108-feet tall Hanuman Statue in Jakhu Temple, hidden behind the deodar trees. The Hanuman statue is visible from anywhere on the hill.",
     "imageCover": "tour-4-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c2960",
-        "description": "New York",
+        "description": "Jakhu Temple",
         "type": "Point",
-        "coordinates": [-73.967696, 40.781821],
+        "coordinates": [77.183901, 31.101225],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c295f",
-        "description": "Los Angeles",
+        "description": "Christ Church, Shimla",
         "type": "Point",
-        "coordinates": [-118.324396, 34.097984],
-        "day": 3
-      },
-      {
-        "_id": "5c88fa8cf4afda39709c295e",
-        "description": "San Francisco",
-        "type": "Point",
-        "coordinates": [-122.408865, 37.787825],
-        "day": 5
+        "coordinates": [77.176115, 31.104395],
+        "day": 1
       }
     ]
   },
   {
     "startLocation": {
-      "description": "California, USA",
+      "description": "Halgarh",
       "type": "Point",
-      "coordinates": [-118.803461, 34.006072],
-      "address": "29130 Cliffside Dr, Malibu, CA 90265, USA"
+      "coordinates": [77.06199, 31.77766],
+      "address": "Halgarh, Himachal Pradesh 175005"
     },
     "ratingsAverage": 3.9,
     "ratingsQuantity": 7,
@@ -279,8 +279,8 @@
       "2022-03-18T10:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c2966",
-    "name": "The Sports Lover",
-    "duration": 14,
+    "name": "The Golden Lake",
+    "duration": 2,
     "maxGroupSize": 8,
     "difficulty": "difficult",
     "guides": [
@@ -289,53 +289,32 @@
       "5c8a1f4e2f8fb814b56fa185"
     ],
     "price": 2997,
-    "summary": "Surfing, skating, parajumping, rock climbing and more, all in one tour",
-    "description": "Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nVoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur!",
+    "summary": "Prashar Lake is surrounded by the imposing Dhauladhar ranges in Kullu Valley",
+    "description": "Surrounded by the Dhauladhar ranges in Kullu Valley is a blue-water lake called Prashar. Prashar Lake is a well-kept secret in the Mandi district of Himachal Pradesh. The trek follows a charming trail through a forest and several  rivulets. Meanwhile, one can enjoy the local culture as the trail goes through villages as well. The trek offers a 180 degree view of the Dhauladhar, Pir Panjal and Kinnaur mountain ranges. For those interested in architecture, the local temple of Prashar Rishi next to the lake, with its riveting Himachali architecture, blends perfectly with the landscape.",
     "imageCover": "tour-6-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c296b",
-        "description": "Point Dume Beach",
+        "description": "Parashar Lake",
         "type": "Point",
-        "coordinates": [-118.809361, 34.003098],
+        "coordinates": [77.100957, 31.755477],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c296a",
-        "description": "Venice Skate Park",
+        "description": "Halgarh Devta Temple",
         "type": "Point",
-        "coordinates": [-118.47549, 33.987367],
-        "day": 4
-      },
-      {
-        "_id": "5c88fa8cf4afda39709c2969",
-        "description": "San Diego Skydive",
-        "type": "Point",
-        "coordinates": [-116.830104, 33.022843],
-        "day": 6
-      },
-      {
-        "_id": "5c88fa8cf4afda39709c2968",
-        "description": "Kern River Rafting",
-        "type": "Point",
-        "coordinates": [-118.4547, 35.710359],
-        "day": 7
-      },
-      {
-        "_id": "5c88fa8cf4afda39709c2967",
-        "description": "Yosemite National Park",
-        "type": "Point",
-        "coordinates": [-119.600492, 37.742371],
-        "day": 10
+        "coordinates": [77.063621, 31.781236],
+        "day": 2
       }
     ]
   },
   {
     "startLocation": {
-      "description": "Utah, USA",
+      "description": "Manali, Himachal Pradesh",
       "type": "Point",
-      "coordinates": [-109.55099, 37.283469],
-      "address": "Bluff, UT 84512, USA"
+      "coordinates": [77.189068, 32.243826],
+      "address": "Circuit House Marg, Manali, Himachal Pradesh 175131"
     },
     "ratingsAverage": 4.8,
     "ratingsQuantity": 6,
@@ -346,45 +325,52 @@
       "2022-01-30T10:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c2970",
-    "name": "The Star Gazer",
-    "duration": 9,
+    "name": "The determined Humpta",
+    "duration": 5,
     "maxGroupSize": 8,
-    "difficulty": "medium",
+    "difficulty": "difficult",
     "guides": ["5c8a21d02f8fb814b56fa189", "5c8a1f292f8fb814b56fa184"],
     "price": 2997,
-    "summary": "The most remote and stunningly beautiful places for seeing the night sky",
-    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "summary": "Surrounded by glaciers, rivulets, jagged mountains and meadows. It is one of the toughest treks",
+    "description": "Himachal, with all its daunting trails covering the exciting nature around, has been a trekker’s first love! The life and terrain beyond the mountains are exciting, raw, and lures every traveler into a momentous journey. Those, driven by the will to conquer the fear and vertigo, walk those beaten pathways and live to tell the tales of an incredible journey. Hampta Pass located in Himachal is one such destination that makes for a perfect trekking paradise for every adventurer.",
     "imageCover": "tour-8-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c2973",
-        "description": "Natural Bridges National Monument",
+        "description": "Gramphu",
         "type": "Point",
-        "coordinates": [-109.99953, 37.629017],
+        "coordinates": [77.259404, 32.393487],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c2972",
-        "description": "Horseshoe Bend",
+        "description": "Chattru",
         "type": "Point",
-        "coordinates": [-111.50954, 36.883269],
-        "day": 3
+        "coordinates": [77.364542, 32.319325],
+        "day": 2
       },
       {
         "_id": "5c88fa8cf4afda39709c2971",
-        "description": "Death Valley National Park",
+        "description": "Hampta Pass",
         "type": "Point",
-        "coordinates": [-117.07399, 36.501435],
-        "day": 6
+        "coordinates": [77.346325, 32.272182],
+        "day": 3
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c1962",
+        "description": "Manali Nature Park",
+        "type": "Point",
+        "coordinates": [77.189212, 32.247131],
+        "day": 5
       }
     ]
   },
   {
     "startLocation": {
-      "description": "Yellowknife, CAN",
+      "description": "McLeod Ganj, Himachal Pradesh",
       "type": "Point",
-      "coordinates": [-114.406097, 62.439943],
-      "address": "Yellowknife, NT X1A 2L2, Canada"
+      "coordinates": [76.320932, 32.241395],
+      "address": "McLeodganj Rd, Forsyth Ganj, McLeod Ganj, Dharamshala, Himachal Pradesh 176219"
     },
     "ratingsAverage": 4.7,
     "ratingsQuantity": 7,
@@ -395,8 +381,8 @@
       "2022-12-12T10:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c2974",
-    "name": "The Northern Lights",
-    "duration": 3,
+    "name": "The breathtaking Triund",
+    "duration": 2,
     "maxGroupSize": 12,
     "difficulty": "easy",
     "guides": [
@@ -405,25 +391,32 @@
       "5c8a23412f8fb814b56fa18c"
     ],
     "price": 1497,
-    "summary": "Enjoy the Northern Lights in one of the best places in the world",
-    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
+    "summary": "Easy for first timers, popular among adventure enthusiasts of all ages",
+    "description": "The Triund trek route is exhilarating and super thrilling. The amazing panoramic views from the top at different times of the day – dusk, moonrise, and dawn – highlight the unique charming beauty of Triund. The Triund trek in Mcleodganj comprises of undulating and steep but well-defined trails through the lush forests of green rhododendron and oak trees. So, there need not be any hassle about how to reach Triund or getting lost in the way.",
     "imageCover": "tour-9-cover.jpg",
     "locations": [
       {
-        "_id": "5c88fa8cf4afda39709c2975",
-        "description": "Yellowknife",
+        "_id": "5c88fa8cf4afda39709c1975",
+        "description": "Gallu Devi Temple",
         "type": "Point",
-        "coordinates": [-114.406097, 62.439943],
+        "coordinates": [76.325208, 32.261342],
+        "day": 1
+      },
+      {
+        "_id": "5c88fa8cf4afda39709c1976",
+        "description": "Triund",
+        "type": "Point",
+        "coordinates": [76.353406, 32.265661],
         "day": 1
       }
     ]
   },
   {
     "startLocation": {
-      "description": "California, USA",
+      "description": "Manali, Himachal Pradesh",
       "type": "Point",
-      "coordinates": [-122.29286, 38.294065],
-      "address": "560 Jefferson St, Napa, CA 94559, USA"
+      "coordinates": [77.189068, 32.243826],
+      "address": "Circuit House Marg, Manali, Himachal Pradesh 175131"
     },
     "ratingsAverage": 4.4,
     "ratingsQuantity": 7,
@@ -434,36 +427,36 @@
       "2021-09-01T09:00:00.000Z"
     ],
     "_id": "5c88fa8cf4afda39709c296c",
-    "name": "The Wine Taster",
+    "name": "The Views of Bhrighu",
     "duration": 5,
     "maxGroupSize": 8,
     "difficulty": "easy",
     "guides": ["5c8a22c62f8fb814b56fa18b", "5c8a23412f8fb814b56fa18c"],
     "price": 1997,
-    "summary": "Exquisite wines, scenic views, exclusive barrel tastings,  and much more",
-    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "summary": "The Bhrigu Lake Trek is a high level alpine lake that is from Manali",
+    "description": "It is just a three days’ hike from Manali. The best part of Bhrigu Lake Trek is that you get to climb the feet of 14,000 ft. in just three days. This feat is achieved generally on the fourth or fifth day that too if they are completely trained. Thus, just imagine completing something like this in three days. The most alpine meadows start around 11,000 ft. which is above the tree line. When you start trekking, you start walking down the meadows within the first 10 minutes of the trek itself.",
     "imageCover": "tour-7-cover.jpg",
     "locations": [
       {
         "_id": "5c88fa8cf4afda39709c296f",
-        "description": "Beringer Vineyards",
+        "description": "Rola Koli Campsite",
         "type": "Point",
-        "coordinates": [-122.479887, 38.510312],
+        "coordinates": [77.232705, 32.370623],
         "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c296e",
-        "description": "Clos Pegase Winery & Tasting Room",
+        "description": "Bhrigu Lake",
         "type": "Point",
-        "coordinates": [-122.582948, 38.585707],
-        "day": 3
+        "coordinates": [77.242481, 32.293379],
+        "day": 1
       },
       {
         "_id": "5c88fa8cf4afda39709c296d",
-        "description": "Raymond Vineyard and Cellar",
+        "description": "Manali Nature Park",
         "type": "Point",
-        "coordinates": [-122.434697, 38.482181],
-        "day": 5
+        "coordinates": [77.189212, 32.247131],
+        "day": 2
       }
     ]
   }
