@@ -8,12 +8,4 @@ mixin reviewCard(review)
       each star in [1, 2, 3, 4, 5]
         svg.reviews__star(class=`reviews__star--${review.rating >= star ? 'active' : 'inactive'}`)
           use(xlink:href='/img/icons.svg#icon-star')
-  .reviews__card
-      .reviews__avatar
-      if user
-        img.reviews__avatar-img(src=`/img/users/${user.photo}`, alt=`${user.name}`)
-        h6.reviews__user= `${user.name}`
-        form.form.form--login
-          form__group
-          input#number.form__input(type='text', placeholder='From 1 to 5')
-          input#text.form__input(type='text', placeholder='write your review',maxlength='1')
+  
